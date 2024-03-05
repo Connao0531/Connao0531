@@ -182,9 +182,16 @@ if __name__ == '__main__':
            exit()
                     
         movimiento_actual = f"movimiento_{movimiento_seleccionado}"
-        print("Usted ha seleccionado a",pokemon_dict[movimiento_actual]['nombre'])
+        
+        print(pokemon_dict)
 
-        resultados['movimiento_seleccionado'] = pokemon_dict[movimiento_actual]['nombre']
+        for pokemon_dict in batalla:
+            
+            if pokemon_atacante == pokemon_dict['identificador']:
+                
+                print("Usted ha seleccionado a",pokemon_dict[movimiento_actual]['nombre'])
+
+                resultados['movimiento_seleccionado'] = pokemon_dict[movimiento_actual]['nombre']
 
 
         print("\n*********************")
